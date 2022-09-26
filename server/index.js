@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -8,7 +9,7 @@ const postRouter = require("./routes/post");
 const connectDB = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://hieuvnautotech:211899900So@mern-learnit.ygpexhl.mongodb.net/?retryWrites=true&w=majority`,
+      `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@mern-learnit.ygpexhl.mongodb.net/?retryWrites=true&w=majority`,
       {
         // useCreateIndex: true,
         // useNewUrlParser: true,
