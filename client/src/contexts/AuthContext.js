@@ -1,3 +1,4 @@
+// để quản lý trạng thái, xác thực người dùng login-out thì sử dụng api của react đó là AuthContext
 import { createContext, useReducer, useEffect } from 'react'
 import { authReducer } from '../reducers/authReducer'
 import { apiUrl, LOCAL_STORAGE_TOKEN_NAME } from './constants'
